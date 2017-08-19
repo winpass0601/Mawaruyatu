@@ -10,13 +10,13 @@ namespace HF
 	{
 	private:
 	public:
-		ID3D11Device* m_pD3DDevice;
-		ID3D11DeviceContext* m_pD3DDeviceContext;
+		ID3D11Device*			m_pD3DDevice;
+		ID3D11DeviceContext*	m_pD3DDeviceContext;
 		IDXGISwapChain*         m_pSwapChain;
 		ID3D11RenderTargetView* m_pRenderTargetView;
-		D3D_DRIVER_TYPE         m_DriverType;
-		D3D_FEATURE_LEVEL       m_FeatureLevel;
-		D3D11_VIEWPORT          m_Viewport;
+		D3D_DRIVER_TYPE         m_driverType;
+		D3D_FEATURE_LEVEL       m_featureLevel;
+		D3D11_VIEWPORT          m_viewport;
 	protected:
 		Direct3D();
 	private:

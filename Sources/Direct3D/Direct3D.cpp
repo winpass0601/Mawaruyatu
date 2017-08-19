@@ -79,11 +79,11 @@ HRESULT Direct3D::InitDirect3D(HWND hwnd,UINT width,UINT heiht)
 			&swapChainDesc,
 			&m_pSwapChain,
 			&m_pD3DDevice,
-			&m_FeatureLevel,
+			&m_featureLevel,
 			&m_pD3DDeviceContext
 			);
 		if (SUCCEEDED(hr)) {
-			m_DriverType = driverTypes[i];
+			m_driverType = driverTypes[i];
 			break;
 		}
 	}
@@ -100,14 +100,14 @@ HRESULT Direct3D::InitDirect3D(HWND hwnd,UINT width,UINT heiht)
 	m_pD3DDeviceContext->OMSetRenderTargets(1, &m_pRenderTargetView, nullptr);
 
 	//VIEWPORT CREATION
-	m_Viewport.Width = static_cast<float>(width);
-	m_Viewport.Height = static_cast<float>(heiht);
-	m_Viewport.TopLeftX = 0;
-	m_Viewport.TopLeftY = 0;
-	m_Viewport.MinDepth = 0.0f;
-	m_Viewport.MaxDepth = 1.0f;
+	m_viewport.Width = static_cast<float>(width);
+	m_viewport.Height = static_cast<float>(heiht);
+	m_viewport.TopLeftX = 0;
+	m_viewport.TopLeftY = 0;
+	m_viewport.MinDepth = 0.0f;
+	m_viewport.MaxDepth = 1.0f;
 
-	m_pD3DDeviceContext->RSSetViewports(1, &m_Viewport);
+	m_pD3DDeviceContext->RSSetViewports(1, &m_viewport);
 
 	SAFE_RELEASE(m_pBackBufferTex);
 
