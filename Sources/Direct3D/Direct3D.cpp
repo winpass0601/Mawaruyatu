@@ -2,7 +2,7 @@
 
 using namespace HF;
 
-Direct3D::Direct3DFramework()
+Direct3D::Direct3D()
 {
 	m_pD3DDevice = nullptr;
 	m_pD3DDeviceContext = nullptr;
@@ -10,7 +10,7 @@ Direct3D::Direct3DFramework()
 	m_pRenderTargetView = nullptr;
 }
 
-Direct3D::~Direct3DFramework()
+Direct3D::~Direct3D()
 {
 	Release();
 }
