@@ -11,6 +11,12 @@
     <Filter Include="Framework\Window">
       <UniqueIdentifier>{bb0b681c-244a-4a1f-82ad-ea1449288db2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Common">
+      <UniqueIdentifier>{9603df69-2394-4540-a7a5-8152018dc62a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Direct3D">
+      <UniqueIdentifier>{ad99c581-0919-488b-a34f-b9298d6ccc47}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\main.cpp">
@@ -19,10 +25,19 @@
     <ClCompile Include="Sources\Window\Window.cpp">
       <Filter>Framework\Window</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\Direct3D\Direct3D.cpp">
+      <Filter>Framework\Direct3D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\Window\Window.h">
       <Filter>Framework\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Common.h">
+      <Filter>Framework\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Direct3D\Direct3D.h">
+      <Filter>Framework\Direct3D</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
