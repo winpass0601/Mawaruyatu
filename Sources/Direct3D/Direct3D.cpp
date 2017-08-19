@@ -94,12 +94,12 @@ HRESULT Direct3D::InitDirect3D(HWND hwnd,UINT width,UINT heiht)
 	//レンダーターゲットビュー作成
 	ID3D11Texture2D* m_pBackBufferTex = 0;
 	m_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), reinterpret_cast<void**>(&m_pBackBufferTex));
-	//
+	
 	m_pD3DDevice->CreateRenderTargetView(m_pBackBufferTex, nullptr, &m_pRenderTargetView);
 
 	m_pD3DDeviceContext->OMSetRenderTargets(1, &m_pRenderTargetView, nullptr);
 
-	//VIEWPORT CREATION
+	//ビューポート作成
 	m_viewport.Width = static_cast<float>(width);
 	m_viewport.Height = static_cast<float>(heiht);
 	m_viewport.TopLeftX = 0;

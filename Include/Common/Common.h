@@ -12,19 +12,3 @@
 
 #define SAFE_RELEASE(x) if( x != nullptr ){ x->Release(); x = nullptr; }
 #define SAFE_DELETE(x)  if( x != nullptr ){ delete x;  x = nullptr; }
-
-class Exception
-{
-public:
-	TCHAR m_pErrorStr[1024];
-
-	Exception(HRESULT hr, TCHAR* pMsg)
-	{
-		_stprintf_s(m_pErrorStr, _T("■□■HRESULT：0x%x [ %s ]\n"), hr, pMsg);
-
-#if defined(DEBUG) || defined(_DEBUG)
-		// エラーをデバッガに出力
-		OutputDebugString(m_pErrorStr);
-#endif
-	}
-};
