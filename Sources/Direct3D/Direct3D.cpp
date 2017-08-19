@@ -67,7 +67,7 @@ HRESULT Direct3D::InitDirect3D(HWND hwnd,UINT width,UINT heiht)
 	swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
 
 	//デバイス作成
-	for (int i = 0; i < numDriverTypes; ++i) {
+	for (unsigned i = 0; i < numDriverTypes; ++i) {
 		hr = D3D11CreateDeviceAndSwapChain(
 			nullptr,
 			driverTypes[i],
